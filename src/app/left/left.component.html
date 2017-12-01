@@ -1,0 +1,6 @@
+<div>
+	<div><input type="text" [(ngModel)]="query" /></div>
+	<div *ngFor="let group of groups | userFilter:'id,name':query" class="group" (click)="showGroupDetail(group)">
+		<i class="fa fa-square-o" aria-hidden="true">&nbsp;{{group.name}}</i>
+	</div>
+</div>
